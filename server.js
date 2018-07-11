@@ -21,7 +21,7 @@ server.use(bodyParser.json());
 serverRoutes(server);
 
 // get the port the app will run on from the serverConfig
-const port = config.port;
+const port = process.env.PORT || config.port;
 
 // start the app
 server.listen(config.port, (err) => {
