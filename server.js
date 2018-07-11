@@ -24,7 +24,7 @@ serverRoutes(server);
 const port = process.env.PORT || config.port;
 
 // start the app
-server.listen(config.port, (err) => {
+server.listen(port, (err) => {
   if (err) {
     console.log(err);
   }
