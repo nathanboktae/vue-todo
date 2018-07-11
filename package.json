@@ -7,7 +7,6 @@
     "node": "6"
   },
   "scripts": {
-    "start": "NODE_ENV=development babel-node server.js",
     "dev:server": "NODE_ENV=development babel-node server.js",
     "hot": "NODE_ENV=development babel-node ./webpackConfig/webpack.server.babel.js",
     "prod:build:client": "npm run clobber:client && NODE_ENV=production  webpack --config ./webpackConfig/webpack.client.prod.babel.js",
@@ -15,7 +14,7 @@
     "prod:build:both": "npm run prod:build:client && npm run prod:build:server",
     "clobber:client": "rm -rf public/dist",
     "clobber:server": "rm -rf dist",
-    "prod": "npm run prod:build:both && NODE_ENV=production babel-node server.js"
+    "start": "npm run prod:build:both && NODE_ENV=production babel-node server.js"
   },
   "dependencies": {
     "autosize": "^3.0.20",
